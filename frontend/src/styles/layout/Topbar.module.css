@@ -1,0 +1,95 @@
+.topbar {
+    min-height: 88px;
+    padding: 18px 34px;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--card-background);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topbar h2 {
+    margin: 0;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.topbar p {
+    margin: 4px 0 0;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.iconButton {
+    position: relative;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    background-color: white;
+    color: var(--text-primary);
+}
+
+.notificationDot {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #dc3545;
+    border: 2px solid white;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background-color: var(--primary-green);
+    color: white;
+    font-weight: 700;
+}
+
+.profileText {
+    display: flex;
+    flex-direction: column;
+}
+
+.profileText strong {
+    font-size: 14px;
+}
+
+.profileText span {
+    color: var(--text-secondary);
+    font-size: 12px;
+}
+
+@media (max-width: 575px) {
+    .topbar {
+        padding: 16px 18px;
+    }
+
+    .profileText {
+        display: none;
+    }
+}
+
+.authActions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

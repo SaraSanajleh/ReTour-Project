@@ -40,7 +40,7 @@ The system aims to generate personalized tourism packages using Large Language M
 
 ## Team Beta — Knowledge & Platform
 
-- Developer C (Lead) : Rahaf
+- Developer C (Lead) : Rahaf AlQura'an
 - Developer D : Sara Jaradat
 
 
