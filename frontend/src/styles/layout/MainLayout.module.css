@@ -1,22 +1,8 @@
-.page {
+.layout {
     min-height: 100vh;
+    background-color: var(--page-background);
 }
 
-.mainArea {
-    margin-left: 260px;
-    min-height: 100vh;
-}
-
-.content {
-    padding: 30px;
-}
-
-@media (max-width: 991px) {
-    .mainArea {
-        margin-left: 0;
-    }
-
-    .content {
-        padding: 20px;
-    }
+.main {
+    min-height: calc(100vh - 76px);
 }
