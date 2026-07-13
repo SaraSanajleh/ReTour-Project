@@ -325,3 +325,43 @@
         min-width: 0;
     }
 }
+
+.choiceCard {
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.choiceCard:hover {
+    border-color: var(--primary-green);
+    transform: translateY(-2px);
+}
+
+.selectedChoice {
+    border: 2px solid var(--primary-green);
+    background-color: var(--primary-green-light);
+}
+
+.selectedAiChoice {
+    border: 2px solid #176ac3;
+    background-color: #eff7ff;
+}
+
+.cardAction {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary-green);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.aiChoiceCard .cardAction {
+    color: #176ac3;
+}
+
+.generateButton:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+    transform: none;
+}
