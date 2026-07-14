@@ -384,7 +384,7 @@ export default function Home() {
 
             <section className={styles.chooseSection} aria-label="Choose your experience">
                 <div className={styles.chooseInner}>
-                    <h2 className={styles.sectionTitle}>Choose Your Experience</h2>
+                    <h2 className={`${styles.sectionTitle} ${styles.centerTitle}`}>Choose Your Experience</h2>
 
                     <div className={styles.experienceCards}>
                         <Link href="/ai-builder?mode=browse" className={styles.expCard}>
@@ -410,8 +410,8 @@ export default function Home() {
                             </ul>
 
                             <div className={styles.expCardBtn}>
-                                <span className={styles.expBtnText}>Explore Packages</span>
-                                <span className={styles.expBtnArrow}>
+                                <span className={styles.expBtnText}>
+                                    Explore Packages
                                     <i className="bi bi-arrow-right" />
                                 </span>
                             </div>

@@ -653,6 +653,7 @@
     color: #ffffff;
     transform: translateY(-1px);
 }
+
 /* ─── How ReTour Works ─── */
 
 .howItWorks {
@@ -757,8 +758,14 @@
 
 .expCard {
     border-radius: 20px;
-    background: #ffffff;
-    border: 1px solid #e0ebe4;
+    background:
+        linear-gradient(135deg,
+            rgba(255, 255, 255, .99) 0%,
+            rgba(255, 255, 255, .97) 45%,
+            rgba(255, 255, 255, .90) 70%,
+            rgba(255, 255, 255, .78) 100%),
+        url('/images/petracard.png') center / cover no-repeat;
+    border: 1px solid #d8e4dc;
     padding: 36px 36px 32px;
     display: flex;
     flex-direction: column;
@@ -777,8 +784,14 @@
 }
 
 .expCardAI {
-    background: #17201b;
-    border-color: #17201b;
+    background:
+        linear-gradient(135deg,
+            rgba(250, 243, 227, .99) 0%,
+            rgba(250, 243, 227, .97) 45%,
+            rgba(250, 243, 227, .90) 70%,
+            rgba(250, 243, 227, .78) 100%),
+        url('/images/piccard.png') center / cover no-repeat;
+    border-color: #e6d8b8;
 }
 
 .expCardHeader {
@@ -790,17 +803,17 @@
 .expCardIcon {
     width: 54px;
     height: 54px;
-    border-radius: 14px;
-    background: #edf5ef;
-    color: #17673f;
+    border-radius: 50%;
+    background: #17673f;
+    color: #ffffff;
     display: grid;
     place-items: center;
-    font-size: 24px;
+    font-size: 22px;
     flex-shrink: 0;
 }
 
 .expCardIconAI {
-    background: #c9a84c;
+    background: #b98f36;
     color: #ffffff;
 }
 
@@ -812,18 +825,18 @@
 }
 
 .expCardAI .expCardHeader h3 {
-    color: #ffffff;
+    color: #3a2f1c;
 }
 
 .expCardHeader p {
     margin: 0;
     font-size: 13px;
-    color: #68746d;
+    color: #4c5850;
     line-height: 1.6;
 }
 
 .expCardAI .expCardHeader p {
-    color: #a3b5a9;
+    color: #6b5d42;
 }
 
 .expCardFeatures {
@@ -840,11 +853,11 @@
     align-items: center;
     gap: 9px;
     font-size: 13px;
-    color: #3d4f45;
+    color: #2c3a32;
 }
 
 .expCardAI .expCardFeatures li {
-    color: #c2d4ca;
+    color: #4a3d28;
 }
 
 .expCardFeatures li i {
@@ -853,46 +866,51 @@
 }
 
 .expCardAI .expCardFeatures li i {
-    color: #c9a84c;
+    color: #9c6f1a;
 }
 
 .expCardBtn {
     margin-top: auto;
     padding-top: 20px;
-    border-top: 1px solid #e8f0ea;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.expCardAI .expCardBtn {
-    border-top-color: #2a3a31;
 }
 
 .expBtnText {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    height: 48px;
+    border-radius: 10px;
+    border: 1.5px solid #17673f;
+    background: transparent;
+    color: #17673f;
     font-size: 14px;
     font-weight: 700;
-    color: #17673f;
+    transition: background 0.2s, color 0.2s;
+}
+
+.expCard:hover .expBtnText {
+    background: #17673f;
+    color: #ffffff;
 }
 
 .expCardAI .expBtnText {
-    color: #c9a84c;
+    border-color: #b98f36;
+    color: #b98f36;
+}
+
+.expCardAI:hover .expBtnText {
+    background: #b98f36;
+    color: #ffffff;
 }
 
 .expBtnArrow {
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background: #edf5ef;
-    color: #17673f;
-    display: grid;
-    place-items: center;
-    font-size: 14px;
+    display: none;
 }
 
-.expCardAI .expBtnArrow {
-    background: #c9a84c;
-    color: #ffffff;
+.centerTitle {
+    text-align: center;
 }
 
 /* ─── Testimonials ─── */
