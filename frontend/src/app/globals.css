@@ -1,20 +1,8 @@
-@import "bootstrap/dist/css/bootstrap.min.css";
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
 :root {
-  --primary-green: #237a4b;
-  --primary-green-dark: #145c39;
-  --primary-green-medium: #358f5c;
-  --primary-green-light: #edf7f0;
-
-  --page-background: #f7faf8;
-  --card-background: #ffffff;
-  --border-color: #dde7e1;
-
-  --text-primary: #17231c;
-  --text-secondary: #66736b;
-
-  --soft-shadow: 0 12px 35px rgba(25, 77, 50, 0.08);
+  --background: #fafbf9;
+  --foreground: #17201b;
 }
 
 * {
@@ -27,17 +15,14 @@ html {
 
 html,
 body {
-  margin: 0;
   min-height: 100%;
+  margin: 0;
 }
 
 body {
-  background-color: var(--page-background);
-  color: var(--text-primary);
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 button,
@@ -45,13 +30,4 @@ input,
 select,
 textarea {
   font: inherit;
-}
-
-button,
-a {
-  transition:
-    color 0.2s ease,
-    background-color 0.2s ease,
-    border-color 0.2s ease,
-    transform 0.2s ease;
 }
