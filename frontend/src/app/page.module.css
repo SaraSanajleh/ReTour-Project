@@ -1001,7 +1001,7 @@
 /* ─── Footer ─── */
 
 .footer {
-    background: #17201b;
+    background: #163A2E;
     color: #a3b5a9;
     padding: 64px 0 32px;
 }
@@ -1016,7 +1016,7 @@
     grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr;
     gap: 40px;
     padding-bottom: 48px;
-    border-bottom: 1px solid #2a3a31;
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
 }
 
 .footerBrand {
@@ -1053,7 +1053,7 @@
 .footerDesc {
     font-size: 13px;
     line-height: 1.7;
-    color: #68746d;
+    color: #C8D5CF;
     margin: 0;
 }
 
@@ -1066,7 +1066,7 @@
     width: 34px;
     height: 34px;
     border-radius: 8px;
-    background: #2a3a31;
+    background: rgba(255, 255, 255, .08);
     color: #a3b5a9;
     display: grid;
     place-items: center;
@@ -1076,7 +1076,7 @@
 }
 
 .footerSocials a:hover {
-    background: #17673f;
+    background: #41C27D;
     color: #ffffff;
 }
 
@@ -1100,20 +1100,20 @@
 
 .footerCol ul a {
     font-size: 13px;
-    color: #68746d;
+    color: #C8D5CF;
     text-decoration: none;
     transition: color 0.2s;
 }
 
 .footerCol ul a:hover {
-    color: #a3b5a9;
+    color: #5CD692;
 }
 
 .footerBottom {
     padding-top: 28px;
     text-align: center;
     font-size: 12px;
-    color: #3d4f45;
+    color: #A9BBB3;
 }
 
 /* ─── Responsive additions ─── */
@@ -1164,4 +1164,102 @@
     .footerTop {
         grid-template-columns: 1fr;
     }
+}
+
+.logoSection {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.logoSection h5 {
+
+    margin: 0;
+
+    font-size: 1.05rem;
+
+    font-weight: 700;
+
+    color: #1f2937;
+
+}
+
+.logoSection span {
+
+    font-size: .78rem;
+
+    color: #6b7280;
+
+}
+
+.logoIcon {
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: #198754;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+}
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    text-decoration: none;
+
+}
+
+.footerLogo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.footerLogo h5 {
+    color: #ffffff;
+}
+
+.footerLogo span {
+    color: #C8D5CF;
+}
+
+.stepNumber {
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    color: #17673f;
+
+    background: #edf5ef;
+
+    border: 1px solid #c8d9cd;
+
+    border-radius: 999px;
+
+    padding: 2px 8px;
+
+    margin-bottom: 10px;
+
 }

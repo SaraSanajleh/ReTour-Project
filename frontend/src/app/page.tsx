@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import styles from "./page.module.css";
+import { MapPin } from "lucide-react";
 
 interface HeroSlide {
     id: string;
@@ -73,26 +74,29 @@ const features = [
 const howItWorksSteps = [
     {
         icon: "bi-chat-dots",
-        title: "Tell Us About Your Trip",
-        description: "Share your preferences, interests, and travel style.",
+        title: "Share Your Preferences",
+        description:
+            "Tell us about your travel dates, interests, budget, and travel style.",
     },
     {
         icon: "bi-stars",
-        title: "AI Creates Your Itinerary",
-        description: "Our AI builds a personalized itinerary with local expertise.",
+        title: "AI Builds Your Trip",
+        description:
+            "ReTour AI creates a personalized itinerary using trusted local tourism data.",
     },
     {
-        icon: "bi-pencil-square",
-        title: "Review & Customize",
-        description: "Adjust your itinerary to make it perfect.",
+        icon: "bi-sliders",
+        title: "Review & Personalize",
+        description:
+            "Adjust hotels, activities, restaurants, and experiences until everything feels right.",
     },
     {
-        icon: "bi-calendar2-check",
-        title: "Book & Enjoy",
-        description: "Book with confidence and enjoy your journey.",
+        icon: "bi-check2-circle",
+        title: "Travel with Confidence",
+        description:
+            "Receive your personalized Jordan itinerary and start planning your journey.",
     },
 ];
-
 const testimonials = [
     {
         rating: 5,
@@ -181,14 +185,16 @@ export default function Home() {
             <header className={styles.header}>
                 <nav className={styles.navbar} aria-label="Main navigation">
                     <Link href="/" className={styles.brand}>
-                        <span className={styles.brandIcon}>
-                            <i className="bi bi-geo-alt-fill" />
-                        </span>
 
-                        <span className={styles.brandText}>
-                            <strong>ReTour</strong>
-                            <small>Rediscover Jordan</small>
-                        </span>
+                        <div className={styles.logoIcon}>
+                            <MapPin size={18} />
+                        </div>
+
+                        <div className={styles.logoSection}>
+                            <h5>ReTour</h5>
+                            <span>Rediscover Jordan</span>
+                        </div>
+
                     </Link>
 
                     <div className={styles.navLinks}>
@@ -279,19 +285,19 @@ export default function Home() {
                         </p>
 
                         <div className={styles.heroActions}>
-                            {/* mode=build → user wants a fresh, from-scratch itinerary */}
-                            <Link href="/ai-builder?mode=build" className={styles.primaryButton}>
+                            <Link
+                                href="/wizard?mode=ai_builder"
+                                className={styles.primaryButton}
+                            >
                                 <i className="bi bi-stars" />
                                 Build My AI Trip
                             </Link>
 
-                            {/* mode=browse → same wizard, agent will match against existing packages */}
                             <Link
-                                href="/ai-builder?mode=browse"
+                                href="/wizard?mode=ready_packages"
                                 className={styles.secondaryButton}
                             >
-                                <i className="bi bi-suitcase-lg" />
-                                Browse Packages
+                                Browse Ready Packages
                             </Link>
                         </div>
 
@@ -374,7 +380,7 @@ export default function Home() {
                             <span className={styles.stepIconWrap}>
                                 <i className={`bi ${step.icon}`} />
                             </span>
-                            <span className={styles.stepNumber}>{index + 1}</span>
+
                             <h3>{step.title}</h3>
                             <p>{step.description}</p>
                         </div>
@@ -491,11 +497,16 @@ export default function Home() {
                     <div className={styles.footerTop}>
                         <div className={styles.footerBrand}>
                             <Link href="/" className={styles.footerLogo}>
-                                <i className="bi bi-geo-alt-fill" />
-                                <span>
-                                    <strong>ReTour</strong>
-                                    <small>Rediscover Jordan</small>
-                                </span>
+
+                                <div className={styles.logoIcon}>
+                                    <MapPin size={18} />
+                                </div>
+
+                                <div className={styles.logoSection}>
+                                    <h5>ReTour</h5>
+                                    <span>Rediscover Jordan</span>
+                                </div>
+
                             </Link>
 
                             <p className={styles.footerDesc}>

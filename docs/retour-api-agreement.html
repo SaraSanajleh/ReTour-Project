@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,7 +21,11 @@
       --bad: #f87171;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       font-family: "Segoe UI", Tahoma, sans-serif;
@@ -43,14 +48,29 @@
       margin-bottom: 10px;
     }
 
-    .hero h1 span.alpha { color: var(--alpha); }
-    .hero h1 span.beta { color: var(--beta); }
+    .hero h1 span.alpha {
+      color: var(--alpha);
+    }
 
-    .hero p { color: var(--muted); max-width: 760px; margin: 0 auto; }
+    .hero h1 span.beta {
+      color: var(--beta);
+    }
 
-    .container { max-width: 1140px; margin: 0 auto; padding: 36px 24px; }
+    .hero p {
+      color: var(--muted);
+      max-width: 760px;
+      margin: 0 auto;
+    }
 
-    .section { margin-bottom: 52px; }
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 36px 24px;
+    }
+
+    .section {
+      margin-bottom: 52px;
+    }
 
     .section-title {
       display: flex;
@@ -61,7 +81,9 @@
       border-bottom: 2px solid var(--border);
     }
 
-    .section-title h2 { font-size: 1.45rem; }
+    .section-title h2 {
+      font-size: 1.45rem;
+    }
 
     .badge {
       padding: 5px 12px;
@@ -71,16 +93,48 @@
       white-space: nowrap;
     }
 
-    .badge-alpha { background: rgba(45,212,168,0.15); color: var(--alpha); border: 1px solid var(--alpha); }
-    .badge-beta { background: rgba(108,158,255,0.15); color: var(--beta); border: 1px solid var(--beta); }
-    .badge-both { background: rgba(240,180,41,0.12); color: var(--external); border: 1px solid var(--external); }
-    .badge-ext { background: rgba(248,113,113,0.12); color: var(--danger); border: 1px solid var(--danger); }
+    .badge-alpha {
+      background: rgba(45, 212, 168, 0.15);
+      color: var(--alpha);
+      border: 1px solid var(--alpha);
+    }
 
-    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .badge-beta {
+      background: rgba(108, 158, 255, 0.15);
+      color: var(--beta);
+      border: 1px solid var(--beta);
+    }
+
+    .badge-both {
+      background: rgba(240, 180, 41, 0.12);
+      color: var(--external);
+      border: 1px solid var(--external);
+    }
+
+    .badge-ext {
+      background: rgba(248, 113, 113, 0.12);
+      color: var(--danger);
+      border: 1px solid var(--danger);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
 
     @media (max-width: 860px) {
-      .grid-2, .grid-3 { grid-template-columns: 1fr; }
+
+      .grid-2,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
     }
 
     .card {
@@ -90,9 +144,21 @@
       padding: 22px;
     }
 
-    .card h3 { font-size: 1rem; margin-bottom: 10px; }
-    .card p, .card li { color: var(--muted); font-size: 0.9rem; }
-    .card ul { padding-right: 20px; margin-top: 8px; }
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .card p,
+    .card li {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .card ul {
+      padding-right: 20px;
+      margin-top: 8px;
+    }
 
     .pipeline {
       background: var(--surface);
@@ -109,12 +175,32 @@
       text-align: left;
     }
 
-    .pipeline .a { color: var(--alpha); font-weight: 700; }
-    .pipeline .b { color: var(--beta); font-weight: 700; }
-    .pipeline .e { color: var(--external); }
-    .pipeline .ok { color: var(--ok); }
-    .pipeline .bad { color: var(--bad); font-weight: 700; }
-    .pipeline .comment { color: #5a7a9a; }
+    .pipeline .a {
+      color: var(--alpha);
+      font-weight: 700;
+    }
+
+    .pipeline .b {
+      color: var(--beta);
+      font-weight: 700;
+    }
+
+    .pipeline .e {
+      color: var(--external);
+    }
+
+    .pipeline .ok {
+      color: var(--ok);
+    }
+
+    .pipeline .bad {
+      color: var(--bad);
+      font-weight: 700;
+    }
+
+    .pipeline .comment {
+      color: #5a7a9a;
+    }
 
     .api-block {
       border: 2px solid var(--border);
@@ -132,8 +218,15 @@
       gap: 12px;
     }
 
-    .api-header.alpha { background: rgba(45,212,168,0.08); border-bottom: 2px solid var(--alpha); }
-    .api-header.beta { background: rgba(108,158,255,0.08); border-bottom: 2px solid var(--beta); }
+    .api-header.alpha {
+      background: rgba(45, 212, 168, 0.08);
+      border-bottom: 2px solid var(--alpha);
+    }
+
+    .api-header.beta {
+      background: rgba(108, 158, 255, 0.08);
+      border-bottom: 2px solid var(--beta);
+    }
 
     .method {
       font-family: Consolas, monospace;
@@ -144,8 +237,15 @@
       direction: ltr;
     }
 
-    .method-post { background: rgba(45,212,168,0.2); color: var(--alpha); }
-    .method-get { background: rgba(108,158,255,0.2); color: var(--beta); }
+    .method-post {
+      background: rgba(45, 212, 168, 0.2);
+      color: var(--alpha);
+    }
+
+    .method-get {
+      background: rgba(108, 158, 255, 0.2);
+      color: var(--beta);
+    }
 
     .api-path {
       font-family: Consolas, monospace;
@@ -155,7 +255,10 @@
       color: var(--text);
     }
 
-    .api-body { padding: 22px; background: var(--surface); }
+    .api-body {
+      padding: 22px;
+      background: var(--surface);
+    }
 
     .flow-row {
       display: flex;
@@ -178,13 +281,35 @@
       min-width: 110px;
     }
 
-    .flow-node.react { border-color: #a78bfa; color: #c4b5fd; }
-    .flow-node.alpha { border-color: var(--alpha); color: var(--alpha); }
-    .flow-node.beta { border-color: var(--beta); color: var(--beta); }
-    .flow-node.db { border-color: var(--external); color: var(--external); }
-    .flow-node.ext { border-color: var(--danger); color: #fca5a5; }
+    .flow-node.react {
+      border-color: #a78bfa;
+      color: #c4b5fd;
+    }
 
-    .arrow { color: var(--muted); font-size: 1.2rem; }
+    .flow-node.alpha {
+      border-color: var(--alpha);
+      color: var(--alpha);
+    }
+
+    .flow-node.beta {
+      border-color: var(--beta);
+      color: var(--beta);
+    }
+
+    .flow-node.db {
+      border-color: var(--external);
+      color: var(--external);
+    }
+
+    .flow-node.ext {
+      border-color: var(--danger);
+      color: #fca5a5;
+    }
+
+    .arrow {
+      color: var(--muted);
+      font-size: 1.2rem;
+    }
 
     pre.json {
       background: #0a0f18;
@@ -207,8 +332,13 @@
       margin-bottom: 4px;
     }
 
-    .json-label.req { color: var(--beta); }
-    .json-label.res { color: var(--alpha); }
+    .json-label.req {
+      color: var(--beta);
+    }
+
+    .json-label.res {
+      color: var(--alpha);
+    }
 
     table {
       width: 100%;
@@ -217,14 +347,20 @@
       margin-top: 12px;
     }
 
-    th, td {
+    th,
+    td {
       border: 1px solid var(--border);
       padding: 11px 14px;
       text-align: right;
     }
 
-    th { background: var(--surface2); }
-    td { color: var(--muted); }
+    th {
+      background: var(--surface2);
+    }
+
+    td {
+      color: var(--muted);
+    }
 
     .compare {
       display: grid;
@@ -233,34 +369,48 @@
       margin-top: 16px;
     }
 
-    @media (max-width: 700px) { .compare { grid-template-columns: 1fr; } }
+    @media (max-width: 700px) {
+      .compare {
+        grid-template-columns: 1fr;
+      }
+    }
 
     .wrong {
       border: 2px solid var(--bad);
       border-radius: 12px;
       padding: 16px;
-      background: rgba(248,113,113,0.06);
+      background: rgba(248, 113, 113, 0.06);
     }
 
     .right {
       border: 2px solid var(--ok);
       border-radius: 12px;
       padding: 16px;
-      background: rgba(74,222,128,0.06);
+      background: rgba(74, 222, 128, 0.06);
     }
 
-    .wrong h4 { color: var(--bad); margin-bottom: 8px; }
-    .right h4 { color: var(--ok); margin-bottom: 8px; }
+    .wrong h4 {
+      color: var(--bad);
+      margin-bottom: 8px;
+    }
+
+    .right h4 {
+      color: var(--ok);
+      margin-bottom: 8px;
+    }
 
     .summary-box {
-      background: linear-gradient(135deg, rgba(45,212,168,0.08), rgba(108,158,255,0.08));
+      background: linear-gradient(135deg, rgba(45, 212, 168, 0.08), rgba(108, 158, 255, 0.08));
       border: 2px solid var(--border);
       border-radius: 16px;
       padding: 28px;
       margin-top: 20px;
     }
 
-    .summary-box h3 { margin-bottom: 16px; font-size: 1.15rem; }
+    .summary-box h3 {
+      margin-bottom: 16px;
+      font-size: 1.15rem;
+    }
 
     .team-commit {
       display: grid;
@@ -269,24 +419,35 @@
       margin-top: 16px;
     }
 
-    @media (max-width: 700px) { .team-commit { grid-template-columns: 1fr; } }
+    @media (max-width: 700px) {
+      .team-commit {
+        grid-template-columns: 1fr;
+      }
+    }
 
     .commit-alpha {
-      background: rgba(45,212,168,0.08);
+      background: rgba(45, 212, 168, 0.08);
       border: 1px solid var(--alpha);
       border-radius: 12px;
       padding: 18px;
     }
 
     .commit-beta {
-      background: rgba(108,158,255,0.08);
+      background: rgba(108, 158, 255, 0.08);
       border: 1px solid var(--beta);
       border-radius: 12px;
       padding: 18px;
     }
 
-    .commit-alpha h4 { color: var(--alpha); margin-bottom: 10px; }
-    .commit-beta h4 { color: var(--beta); margin-bottom: 10px; }
+    .commit-alpha h4 {
+      color: var(--alpha);
+      margin-bottom: 10px;
+    }
+
+    .commit-beta h4 {
+      color: var(--beta);
+      margin-bottom: 10px;
+    }
 
     .footer {
       text-align: center;
@@ -309,140 +470,161 @@
       margin-left: 8px;
     }
 
-    .num-alpha { background: var(--alpha); color: #0b1020; }
-    .num-beta { background: var(--beta); color: #0b1020; }
+    .num-alpha {
+      background: var(--alpha);
+      color: #0b1020;
+    }
+
+    .num-beta {
+      background: var(--beta);
+      color: #0b1020;
+    }
   </style>
 </head>
+
 <body>
 
-<section class="hero">
-  <h1>اتفاقية الـ APIs — <span class="alpha">Team Alpha</span> ↔ <span class="beta">Team Beta</span></h1>
-  <p>
-    وثيقة الاتفاق الرسمية بين فريق AI Brain وفريق Knowledge & Platform.<br>
-    يجب مراجعتها والموافقة عليها قبل بدء التطوير المتكامل.
-  </p>
-</section>
+  <section class="hero">
+    <h1>اتفاقية الـ APIs — <span class="alpha">Team Alpha</span> ↔ <span class="beta">Team Beta</span></h1>
+    <p>
+      وثيقة الاتفاق الرسمية بين فريق AI Brain وفريق Knowledge & Platform.<br>
+      يجب مراجعتها والموافقة عليها قبل بدء التطوير المتكامل.
+    </p>
+  </section>
 
-<div class="container">
+  <div class="container">
 
-<!-- ═══════════════════════════════════════════════════════ -->
-<section class="section">
-  <div class="section-title">
-    <span class="badge badge-both">أساسي</span>
-    <h2>نوعان من الـ APIs — افهم الفرق أولاً</h2>
-  </div>
-
-  <div class="grid-2">
-    <div class="card" style="border-color: var(--alpha)">
-      <h3 style="color:var(--alpha)">النوع الأول — Internal APIs (نحن نبنيها)</h3>
-      <ul>
-        <li>نكتبها بـ <strong>FastAPI</strong> داخل مشروع ReTour</li>
-        <li>هي <strong>عقد التواصل</strong> بين Alpha و Beta</li>
-        <li>مثال: <code>POST /api/v1/packages/generate</code></li>
-        <li>الـ Frontend لا يتكلم مع الـ Agent مباشرة — يمر عبر API</li>
-      </ul>
-    </div>
-    <div class="card" style="border-color: var(--external)">
-      <h3 style="color:var(--external)">النوع الثاني — External APIs (خدمات خارجية)</h3>
-      <ul>
-        <li>خدمات من شركات أخرى — <strong>لا نبنيها</strong></li>
-        <li>مثال: Weather API · Google Maps · OpenStreetMap</li>
-        <li><strong>Beta</strong> يستهلكها ويغلّفها داخل Context API</li>
-        <li><strong>Alpha</strong> لا يعرف تفاصيل Weather API أبداً</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════ -->
-<section class="section">
-  <div class="section-title">
-    <span class="badge badge-both">الصورة الكاملة</span>
-    <h2>الرسم النهائي للتواصل</h2>
-  </div>
-
-  <div class="pipeline"><span class="comment">/* من المستخدم إلى الباقة — مسار واحد واضح */</span>
-
-                    <span class="b">React UI</span>  (Team Beta)
-                         │
-                         │  المستخدم يعبّي النموذج
-                         ▼
-              <span class="a">POST /api/v1/packages/generate</span>  (Team Alpha يبنيها)
-                         │
-                         ▼
-                  <span class="a">AI Agent</span>  (Team Alpha)
-                         │
-           ┌─────────────┼─────────────┐
-           │             │             │
-           ▼             ▼             ▼
-   <span class="b">Knowledge API</span>   <span class="b">Context API</span>    <span class="b">SME API</span>
-   (Beta يبنيها)    (Beta يبنيها)     (Beta يبنيها)
-           │             │             │
-           ▼             ▼             ▼
-     <span class="b">ChromaDB</span>      <span class="e">Weather API</span>     <span class="b">SME Database</span>
-     (Beta)          <span class="e">Maps API</span>       (Beta)
-                    (External)</div>
-
-  <div class="flow-row">
-    <div class="flow-node react">React Form</div>
-    <span class="arrow">→</span>
-    <div class="flow-node alpha">Generate API<br><small>Alpha</small></div>
-    <span class="arrow">→</span>
-    <div class="flow-node alpha">AI Agent<br><small>Alpha</small></div>
-    <span class="arrow">→</span>
-    <div class="flow-node beta">Beta APIs</div>
-    <span class="arrow">→</span>
-    <div class="flow-node db">Data / External</div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════ API 1 -->
-<section class="section">
-  <div class="section-title">
-    <span class="num num-alpha">1</span>
-    <h2>Package Generation API</h2>
-    <span class="badge badge-alpha">Team Alpha يبنيها</span>
-  </div>
-
-  <p style="color:var(--muted); margin-bottom:18px">
-    <strong>الفكرة:</strong> هذا هو الباب الرئيسي — المستخدم لا يتكلم مع الـ Agent مباشرة.
-    Beta يرسل بروفايل السائح، Alpha يرجع باقة سياحية.
-  </p>
-
-  <div class="api-block">
-    <div class="api-header alpha">
-      <div>
-        <span class="method method-post">POST</span>
-        <span class="api-path">/api/v1/packages/generate</span>
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <section class="section">
+      <div class="section-title">
+        <span class="badge badge-both">أساسي</span>
+        <h2>نوعان من الـ APIs — افهم الفرق أولاً</h2>
       </div>
-      <span class="badge badge-alpha">Owner: Team Alpha</span>
-    </div>
-    <div class="api-body">
+
+      <div class="grid-2">
+        <div class="card" style="border-color: var(--alpha)">
+          <h3 style="color:var(--alpha)">النوع الأول — Internal APIs (نحن نبنيها)</h3>
+          <ul>
+            <li>نكتبها بـ <strong>FastAPI</strong> داخل مشروع ReTour</li>
+            <li>هي <strong>عقد التواصل</strong> بين Alpha و Beta</li>
+            <li>مثال: <code>POST /api/v1/packages/generate</code></li>
+            <li>الـ Frontend لا يتكلم مع الـ Agent مباشرة — يمر عبر API</li>
+          </ul>
+        </div>
+        <div class="card" style="border-color: var(--external)">
+          <h3 style="color:var(--external)">النوع الثاني — External APIs (خدمات خارجية)</h3>
+          <ul>
+            <li>خدمات من شركات أخرى — <strong>لا نبنيها</strong></li>
+            <li>مثال: Weather API · Google Maps · OpenStreetMap</li>
+            <li><strong>Beta</strong> يستهلكها ويغلّفها داخل Context API</li>
+            <li><strong>Alpha</strong> لا يعرف تفاصيل Weather API أبداً</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <section class="section">
+      <div class="section-title">
+        <span class="badge badge-both">الصورة الكاملة</span>
+        <h2>الرسم النهائي للتواصل</h2>
+      </div>
+
+      <div class="pipeline"><span class="comment">/* من المستخدم إلى الباقة — مسار واحد واضح */</span>
+
+        <span class="b">React UI</span> (Team Beta)
+        │
+        │ المستخدم يعبّي النموذج
+        ▼
+        <span class="a">POST /api/v1/packages/generate</span> (Team Alpha يبنيها)
+        │
+        ▼
+        <span class="a">AI Agent</span> (Team Alpha)
+        │
+        ┌─────────────┼─────────────┐
+        │ │ │
+        ▼ ▼ ▼
+        <span class="b">Knowledge API</span> <span class="b">Context API</span> <span class="b">SME API</span>
+        (Beta يبنيها) (Beta يبنيها) (Beta يبنيها)
+        │ │ │
+        ▼ ▼ ▼
+        <span class="b">ChromaDB</span> <span class="e">Weather API</span> <span class="b">SME Database</span>
+        (Beta) <span class="e">Maps API</span> (Beta)
+        (External)
+      </div>
+
       <div class="flow-row">
-        <div class="flow-node react">User + React Form</div>
+        <div class="flow-node react">React Form</div>
         <span class="arrow">→</span>
-        <div class="flow-node beta">Beta Frontend</div>
+        <div class="flow-node alpha">Generate API<br><small>Alpha</small></div>
         <span class="arrow">→</span>
-        <div class="flow-node alpha">This API</div>
+        <div class="flow-node alpha">AI Agent<br><small>Alpha</small></div>
         <span class="arrow">→</span>
-        <div class="flow-node alpha">AI Agent</div>
+        <div class="flow-node beta">Beta APIs</div>
         <span class="arrow">→</span>
-        <div class="flow-node alpha">TourismPackage</div>
+        <div class="flow-node db">Data / External</div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ API 1 -->
+    <section class="section">
+      <div class="section-title">
+        <span class="num num-alpha">1</span>
+        <h2>Package Generation API</h2>
+        <span class="badge badge-alpha">Team Alpha يبنيها</span>
       </div>
 
-      <table>
-        <tr><th>من يستدعي؟</th><td>React UI (Team Beta)</td></tr>
-        <tr><th>من يبني؟</th><td>Team Alpha — لأن الـ Agent عندهم</td></tr>
-        <tr><th>ماذا يفعل Alpha؟</th><td>يستقبل TouristProfile → يبحث في المعرفة → يأخذ السياق → يطلب SME → يرسل للـ LLM → يرجع Package</td></tr>
-        <tr><th>ماذا يفعل Beta؟</th><td>يبني الفورم فقط — يحوّل المدخلات إلى JSON ويرسل الطلب</td></tr>
-      </table>
+      <p style="color:var(--muted); margin-bottom:18px">
+        <strong>الفكرة:</strong> هذا هو الباب الرئيسي — المستخدم لا يتكلم مع الـ Agent مباشرة.
+        Beta يرسل بروفايل السائح، Alpha يرجع باقة سياحية.
+      </p>
 
-      <div class="json-label req">▼ Request — Beta يرسل (مثال: عائلة ألمانية، يوم واحد، آثار)</div>
-      <pre class="json">{
+      <div class="api-block">
+        <div class="api-header alpha">
+          <div>
+            <span class="method method-post">POST</span>
+            <span class="api-path">/api/v1/packages/generate</span>
+          </div>
+          <span class="badge badge-alpha">Owner: Team Alpha</span>
+        </div>
+        <div class="api-body">
+          <div class="flow-row">
+            <div class="flow-node react">User + React Form</div>
+            <span class="arrow">→</span>
+            <div class="flow-node beta">Beta Frontend</div>
+            <span class="arrow">→</span>
+            <div class="flow-node alpha">This API</div>
+            <span class="arrow">→</span>
+            <div class="flow-node alpha">AI Agent</div>
+            <span class="arrow">→</span>
+            <div class="flow-node alpha">TourismPackage</div>
+          </div>
+
+          <table>
+            <tr>
+              <th>من يستدعي؟</th>
+              <td>React UI (Team Beta)</td>
+            </tr>
+            <tr>
+              <th>من يبني؟</th>
+              <td>Team Alpha — لأن الـ Agent عندهم</td>
+            </tr>
+            <tr>
+              <th>ماذا يفعل Alpha؟</th>
+              <td>يستقبل TouristProfile → يبحث في المعرفة → يأخذ السياق → يطلب SME → يرسل للـ LLM → يرجع Package</td>
+            </tr>
+            <tr>
+              <th>ماذا يفعل Beta؟</th>
+              <td>يبني الفورم فقط — يحوّل المدخلات إلى JSON ويرسل الطلب</td>
+            </tr>
+          </table>
+
+          <div class="json-label req">▼ Request — Beta يرسل (مثال: عائلة ألمانية، يوم واحد، آثار)</div>
+          <pre class="json">{
   "tourist_profile": {
     "nationality": "Germany",
     "number_of_people": 4,
-    "adults": 2,
+    "adults": 0,
     "children": 2,
     "trip_duration_days": 1,
     "budget": { "amount": 300, "currency": "EUR" },
@@ -456,8 +638,8 @@
   }
 }</pre>
 
-      <div class="json-label res">▼ Response — Alpha يرجع</div>
-      <pre class="json">{
+          <div class="json-label res">▼ Response — Alpha يرجع</div>
+          <pre class="json">{
   "package": {
     "package_id": "pkg_a1b2c3",
     "title": "Amman Heritage Day — Family Tour",
@@ -484,64 +666,78 @@
     "latency_ms": 4200
   }
 }</pre>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════ API 2 -->
-<section class="section">
-  <div class="section-title">
-    <span class="num num-beta">2</span>
-    <h2>Knowledge Retrieval API</h2>
-    <span class="badge badge-beta">Team Beta يبنيها — Alpha يستهلكها</span>
-  </div>
-
-  <p style="color:var(--muted); margin-bottom:18px">
-    <strong>أهم تعاون بين الفريقين.</strong> Beta يملك البيانات و ChromaDB. Alpha يملك الـ Agent.
-    Alpha <strong>لا يدخل ChromaDB مباشرة أبداً</strong>.
-  </p>
-
-  <div class="compare">
-    <div class="wrong">
-      <h4>❌ خطأ — لا نريد هذا</h4>
-      <div class="pipeline" style="border:none; padding:0; background:transparent; font-size:0.78rem">
-<span class="a">Agent</span> (Alpha)
-   │
-   ▼
-<span class="b">ChromaDB</span> (Beta)
-<span class="comment">/* Alpha مربوط بطريقة التخزين */</span></div>
-    </div>
-    <div class="right">
-      <h4>✅ صح — هذا المطلوب</h4>
-      <div class="pipeline" style="border:none; padding:0; background:transparent; font-size:0.78rem">
-<span class="a">Agent</span> (Alpha)
-   │
-   ▼
-<span class="b">Knowledge API</span> (Beta)
-   │
-   ▼
-<span class="b">ChromaDB</span> (Beta)</div>
-    </div>
-  </div>
-
-  <div class="api-block" style="margin-top:22px">
-    <div class="api-header beta">
-      <div>
-        <span class="method method-post">POST</span>
-        <span class="api-path">/api/v1/knowledge/search</span>
+        </div>
       </div>
-      <span class="badge badge-beta">Owner: Team Beta</span>
-    </div>
-    <div class="api-body">
-      <table>
-        <tr><th>المعنى</th><td>"أعطني كلمة بحث — أرجع لك المعرفة السياحية المناسبة"</td></tr>
-        <tr><th>من يستدعي؟</th><td>AI Agent (Team Alpha) أثناء توليد الباقة</td></tr>
-        <tr><th>من يبني؟</th><td>Team Beta — يبحث في ChromaDB ويرجع النتائج</td></tr>
-        <tr><th>متى؟</th><td>Week 4</td></tr>
-      </table>
+    </section>
 
-      <div class="json-label req">▼ Request — Alpha يرسل</div>
-      <pre class="json">POST /api/v1/knowledge/search
+    <!-- ═══════════════════════════════════════════════════════ API 2 -->
+    <section class="section">
+      <div class="section-title">
+        <span class="num num-beta">2</span>
+        <h2>Knowledge Retrieval API</h2>
+        <span class="badge badge-beta">Team Beta يبنيها — Alpha يستهلكها</span>
+      </div>
+
+      <p style="color:var(--muted); margin-bottom:18px">
+        <strong>أهم تعاون بين الفريقين.</strong> Beta يملك البيانات و ChromaDB. Alpha يملك الـ Agent.
+        Alpha <strong>لا يدخل ChromaDB مباشرة أبداً</strong>.
+      </p>
+
+      <div class="compare">
+        <div class="wrong">
+          <h4>❌ خطأ — لا نريد هذا</h4>
+          <div class="pipeline" style="border:none; padding:0; background:transparent; font-size:0.78rem">
+            <span class="a">Agent</span> (Alpha)
+            │
+            ▼
+            <span class="b">ChromaDB</span> (Beta)
+            <span class="comment">/* Alpha مربوط بطريقة التخزين */</span>
+          </div>
+        </div>
+        <div class="right">
+          <h4>✅ صح — هذا المطلوب</h4>
+          <div class="pipeline" style="border:none; padding:0; background:transparent; font-size:0.78rem">
+            <span class="a">Agent</span> (Alpha)
+            │
+            ▼
+            <span class="b">Knowledge API</span> (Beta)
+            │
+            ▼
+            <span class="b">ChromaDB</span> (Beta)
+          </div>
+        </div>
+      </div>
+
+      <div class="api-block" style="margin-top:22px">
+        <div class="api-header beta">
+          <div>
+            <span class="method method-post">POST</span>
+            <span class="api-path">/api/v1/knowledge/search</span>
+          </div>
+          <span class="badge badge-beta">Owner: Team Beta</span>
+        </div>
+        <div class="api-body">
+          <table>
+            <tr>
+              <th>المعنى</th>
+              <td>"أعطني كلمة بحث — أرجع لك المعرفة السياحية المناسبة"</td>
+            </tr>
+            <tr>
+              <th>من يستدعي؟</th>
+              <td>AI Agent (Team Alpha) أثناء توليد الباقة</td>
+            </tr>
+            <tr>
+              <th>من يبني؟</th>
+              <td>Team Beta — يبحث في ChromaDB ويرجع النتائج</td>
+            </tr>
+            <tr>
+              <th>متى؟</th>
+              <td>Week 4</td>
+            </tr>
+          </table>
+
+          <div class="json-label req">▼ Request — Alpha يرسل</div>
+          <pre class="json">POST /api/v1/knowledge/search
 
 {
   "query": "family archaeology attractions in Amman",
@@ -553,8 +749,8 @@
   }
 }</pre>
 
-      <div class="json-label res">▼ Response — Beta يرجع</div>
-      <pre class="json">{
+          <div class="json-label res">▼ Response — Beta يرجع</div>
+          <pre class="json">{
   "results": [
     {
       "id": "att0015",
@@ -578,49 +774,49 @@
   "total": 2
 }</pre>
 
-      <p style="color:var(--muted); margin-top:14px; font-size:0.88rem">
-        <strong>ماذا يفعل Alpha بعدها؟</strong> يأخذ النتائج ويحقنها في Prompt الـ LLM — لا يخترع أماكن من عنده.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════ API 3 -->
-<section class="section">
-  <div class="section-title">
-    <span class="num num-beta">3</span>
-    <h2>SME API — المرشدون والمشغّلون</h2>
-    <span class="badge badge-beta">Team Beta يبنيها</span>
-    <span class="badge badge-both">Week 6</span>
-  </div>
-
-  <p style="color:var(--muted); margin-bottom:18px">
-    Beta يبني قاعدة بيانات المرشدين. جزء للـ Dashboard (إضافة مرشد)، وجزء للـ Agent (البحث عن مرشد مناسب).
-  </p>
-
-  <!-- 3.1 -->
-  <div class="api-block">
-    <div class="api-header beta">
-      <div>
-        <span class="method method-post">POST</span>
-        <span class="api-path">/api/v1/smes</span>
+          <p style="color:var(--muted); margin-top:14px; font-size:0.88rem">
+            <strong>ماذا يفعل Alpha بعدها؟</strong> يأخذ النتائج ويحقنها في Prompt الـ LLM — لا يخترع أماكن من عنده.
+          </p>
+        </div>
       </div>
-      <span class="badge badge-beta">Dashboard — Beta فقط</span>
-    </div>
-    <div class="api-body">
-      <p style="color:var(--muted); font-size:0.9rem; margin-bottom:12px">
-        <strong>ليس للـ Agent.</strong> المرشد (مثل Ahmed) يفتح حساب ويدخل بياناته من الواجهة.
-      </p>
-      <div class="flow-row">
-        <div class="flow-node react">Ahmed</div>
-        <span class="arrow">→</span>
-        <div class="flow-node beta">SME Dashboard</div>
-        <span class="arrow">→</span>
-        <div class="flow-node beta">POST /smes</div>
-        <span class="arrow">→</span>
-        <div class="flow-node db">SME Database</div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ API 3 -->
+    <section class="section">
+      <div class="section-title">
+        <span class="num num-beta">3</span>
+        <h2>SME API — المرشدون والمشغّلون</h2>
+        <span class="badge badge-beta">Team Beta يبنيها</span>
+        <span class="badge badge-both">Week 6</span>
       </div>
-      <pre class="json">{
+
+      <p style="color:var(--muted); margin-bottom:18px">
+        Beta يبني قاعدة بيانات المرشدين. جزء للـ Dashboard (إضافة مرشد)، وجزء للـ Agent (البحث عن مرشد مناسب).
+      </p>
+
+      <!-- 3.1 -->
+      <div class="api-block">
+        <div class="api-header beta">
+          <div>
+            <span class="method method-post">POST</span>
+            <span class="api-path">/api/v1/smes</span>
+          </div>
+          <span class="badge badge-beta">Dashboard — Beta فقط</span>
+        </div>
+        <div class="api-body">
+          <p style="color:var(--muted); font-size:0.9rem; margin-bottom:12px">
+            <strong>ليس للـ Agent.</strong> المرشد (مثل Ahmed) يفتح حساب ويدخل بياناته من الواجهة.
+          </p>
+          <div class="flow-row">
+            <div class="flow-node react">Ahmed</div>
+            <span class="arrow">→</span>
+            <div class="flow-node beta">SME Dashboard</div>
+            <span class="arrow">→</span>
+            <div class="flow-node beta">POST /smes</div>
+            <span class="arrow">→</span>
+            <div class="flow-node db">SME Database</div>
+          </div>
+          <pre class="json">{
   "name": "Ahmed",
   "type": "Tour Guide",
   "languages": ["German", "Arabic", "English"],
@@ -629,25 +825,25 @@
   "price_range": "mid",
   "regions": ["Amman"]
 }</pre>
-    </div>
-  </div>
-
-  <!-- 3.2 -->
-  <div class="api-block">
-    <div class="api-header beta">
-      <div>
-        <span class="method method-post">POST</span>
-        <span class="api-path">/api/v1/smes/recommend</span>
+        </div>
       </div>
-      <span class="badge badge-beta">Owner: Beta — Alpha يستهلكها</span>
-    </div>
-    <div class="api-body">
-      <p style="color:var(--muted); font-size:0.9rem; margin-bottom:12px">
-        الـ Agent يقول: "عندي عائلة ألمانية، أحتاج مرشد يتكلم ألماني."
-      </p>
 
-      <div class="json-label req">▼ Request — Alpha يرسل</div>
-      <pre class="json">POST /api/v1/smes/recommend
+      <!-- 3.2 -->
+      <div class="api-block">
+        <div class="api-header beta">
+          <div>
+            <span class="method method-post">POST</span>
+            <span class="api-path">/api/v1/smes/recommend</span>
+          </div>
+          <span class="badge badge-beta">Owner: Beta — Alpha يستهلكها</span>
+        </div>
+        <div class="api-body">
+          <p style="color:var(--muted); font-size:0.9rem; margin-bottom:12px">
+            الـ Agent يقول: "عندي عائلة ألمانية، أحتاج مرشد يتكلم ألماني."
+          </p>
+
+          <div class="json-label req">▼ Request — Alpha يرسل</div>
+          <pre class="json">POST /api/v1/smes/recommend
 
 {
   "language": "German",
@@ -656,8 +852,8 @@
   "region": "Amman"
 }</pre>
 
-      <div class="json-label res">▼ Response — Beta يرجع</div>
-      <pre class="json">{
+          <div class="json-label res">▼ Response — Beta يرجع</div>
+          <pre class="json">{
   "recommendations": [
     {
       "id": "guide0001",
@@ -670,54 +866,56 @@
     }
   ]
 }</pre>
-      <p style="color:var(--muted); margin-top:14px; font-size:0.88rem">
-        <strong>Alpha</strong> يستخدم Ahmed داخل الباقة كـ recommended_guide.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════ API 4 -->
-<section class="section">
-  <div class="section-title">
-    <span class="num num-beta">4</span>
-    <h2>Context API — الطقس والمسافات والمواعيد</h2>
-    <span class="badge badge-beta">Team Beta يبنيها — Alpha يستهلكها</span>
-    <span class="badge badge-both">Week 5</span>
-  </div>
-
-  <p style="color:var(--muted); margin-bottom:18px">
-    Beta مسؤول عن جلب المعلومات الخارجية وتغليفها. Alpha لا يعرف تفاصيل Weather API أو Maps API.
-  </p>
-
-  <div class="compare" style="margin-bottom:22px">
-    <div class="wrong">
-      <h4>❌ خطأ</h4>
-      <div class="pipeline" style="border:none; padding:0; background:transparent; font-size:0.78rem">
-<span class="a">Agent</span> → <span class="e">Weather API</span> (مباشرة)</div>
-    </div>
-    <div class="right">
-      <h4>✅ صح</h4>
-      <div class="pipeline" style="border:none; padding:0; background:transparent; font-size:0.78rem">
-<span class="a">Agent</span> → <span class="b">Context API</span> → <span class="e">Weather + Maps</span></div>
-    </div>
-  </div>
-
-  <div class="api-block">
-    <div class="api-header beta">
-      <div>
-        <span class="method method-post">POST</span>
-        <span class="api-path">/api/v1/context</span>
+          <p style="color:var(--muted); margin-top:14px; font-size:0.88rem">
+            <strong>Alpha</strong> يستخدم Ahmed داخل الباقة كـ recommended_guide.
+          </p>
+        </div>
       </div>
-      <span class="badge badge-beta">Owner: Team Beta</span>
-    </div>
-    <div class="api-body">
-      <p style="color:var(--muted); font-size:0.9rem; margin-bottom:12px">
-        Alpha يقول: "أريد حالة الأماكن في عمان بتاريخ معيّن." Beta يجمع من Weather + Maps + Opening Hours.
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ API 4 -->
+    <section class="section">
+      <div class="section-title">
+        <span class="num num-beta">4</span>
+        <h2>Context API — الطقس والمسافات والمواعيد</h2>
+        <span class="badge badge-beta">Team Beta يبنيها — Alpha يستهلكها</span>
+        <span class="badge badge-both">Week 5</span>
+      </div>
+
+      <p style="color:var(--muted); margin-bottom:18px">
+        Beta مسؤول عن جلب المعلومات الخارجية وتغليفها. Alpha لا يعرف تفاصيل Weather API أو Maps API.
       </p>
 
-      <div class="json-label req">▼ Request — Alpha يرسل</div>
-      <pre class="json">POST /api/v1/context
+      <div class="compare" style="margin-bottom:22px">
+        <div class="wrong">
+          <h4>❌ خطأ</h4>
+          <div class="pipeline" style="border:none; padding:0; background:transparent; font-size:0.78rem">
+            <span class="a">Agent</span> → <span class="e">Weather API</span> (مباشرة)
+          </div>
+        </div>
+        <div class="right">
+          <h4>✅ صح</h4>
+          <div class="pipeline" style="border:none; padding:0; background:transparent; font-size:0.78rem">
+            <span class="a">Agent</span> → <span class="b">Context API</span> → <span class="e">Weather + Maps</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="api-block">
+        <div class="api-header beta">
+          <div>
+            <span class="method method-post">POST</span>
+            <span class="api-path">/api/v1/context</span>
+          </div>
+          <span class="badge badge-beta">Owner: Team Beta</span>
+        </div>
+        <div class="api-body">
+          <p style="color:var(--muted); font-size:0.9rem; margin-bottom:12px">
+            Alpha يقول: "أريد حالة الأماكن في عمان بتاريخ معيّن." Beta يجمع من Weather + Maps + Opening Hours.
+          </p>
+
+          <div class="json-label req">▼ Request — Alpha يرسل</div>
+          <pre class="json">POST /api/v1/context
 
 {
   "location": "Amman",
@@ -728,8 +926,8 @@
   ]
 }</pre>
 
-      <div class="json-label res">▼ Response — Beta يجمع ويرجع</div>
-      <pre class="json">{
+          <div class="json-label res">▼ Response — Beta يجمع ويرجع</div>
+          <pre class="json">{
   "weather": {
     "temperature_c": 40,
     "condition": "hot",
@@ -744,199 +942,217 @@
   ]
 }</pre>
 
-      <p style="color:var(--muted); margin-top:14px; font-size:0.88rem">
-        <strong>Alpha / Agent يقرر:</strong> "لا تقترح مشي كثير في الظهر" — يجدول outdoor صباحاً.
-      </p>
+          <p style="color:var(--muted); margin-top:14px; font-size:0.88rem">
+            <strong>Alpha / Agent يقرر:</strong> "لا تقترح مشي كثير في الظهر" — يجدول outdoor صباحاً.
+          </p>
 
-      <table style="margin-top:16px">
-        <tr><th>مصدر البيانات</th><th>من يتعامل معه</th><th>ملاحظة</th></tr>
-        <tr><td>Weather API</td><td>Beta (داخل Context API)</td><td>External — Alpha لا يلمسه</td></tr>
-        <tr><td>Maps API</td><td>Beta (داخل Context API)</td><td>External — Alpha لا يلمسه</td></tr>
-        <tr><td>Opening Hours</td><td>Beta (من Knowledge DB)</td><td>يجب تجهيزها في قاعدة البيانات</td></tr>
+          <table style="margin-top:16px">
+            <tr>
+              <th>مصدر البيانات</th>
+              <th>من يتعامل معه</th>
+              <th>ملاحظة</th>
+            </tr>
+            <tr>
+              <td>Weather API</td>
+              <td>Beta (داخل Context API)</td>
+              <td>External — Alpha لا يلمسه</td>
+            </tr>
+            <tr>
+              <td>Maps API</td>
+              <td>Beta (داخل Context API)</td>
+              <td>External — Alpha لا يلمسه</td>
+            </tr>
+            <tr>
+              <td>Opening Hours</td>
+              <td>Beta (من Knowledge DB)</td>
+              <td>يجب تجهيزها في قاعدة البيانات</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ SUMMARY TABLE -->
+    <section class="section">
+      <div class="section-title">
+        <span class="badge badge-both">ملخص</span>
+        <h2>جدول الاتفاق — كل الـ APIs في مكان واحد</h2>
+      </div>
+
+      <table>
+        <tr>
+          <th>#</th>
+          <th>Endpoint</th>
+          <th>Method</th>
+          <th>يبنيه</th>
+          <th>يستدعيه</th>
+          <th>الأسبوع</th>
+          <th>الوظيفة</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td style="direction:ltr; text-align:left">/api/v1/packages/generate</td>
+          <td>POST</td>
+          <td style="color:var(--alpha)"><strong>Alpha</strong></td>
+          <td>Beta UI</td>
+          <td>Week 3+</td>
+          <td>توليد الباقة السياحية</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td style="direction:ltr; text-align:left">/api/v1/knowledge/search</td>
+          <td>POST</td>
+          <td style="color:var(--beta)"><strong>Beta</strong></td>
+          <td>Alpha Agent</td>
+          <td>Week 4</td>
+          <td>بحث في المعرفة السياحية (RAG)</td>
+        </tr>
+        <tr>
+          <td>3a</td>
+          <td style="direction:ltr; text-align:left">/api/v1/smes</td>
+          <td>POST</td>
+          <td style="color:var(--beta)"><strong>Beta</strong></td>
+          <td>Beta Dashboard</td>
+          <td>Week 6</td>
+          <td>إضافة مرشد / مشغّل</td>
+        </tr>
+        <tr>
+          <td>3b</td>
+          <td style="direction:ltr; text-align:left">/api/v1/smes/recommend</td>
+          <td>POST</td>
+          <td style="color:var(--beta)"><strong>Beta</strong></td>
+          <td>Alpha Agent</td>
+          <td>Week 6</td>
+          <td>توصية مرشد مناسب</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td style="direction:ltr; text-align:left">/api/v1/context</td>
+          <td>POST</td>
+          <td style="color:var(--beta)"><strong>Beta</strong></td>
+          <td>Alpha Agent</td>
+          <td>Week 5</td>
+          <td>طقس · مسافات · مواعيد فتح</td>
+        </tr>
       </table>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ═══════════════════════════════════════════════════════ SUMMARY TABLE -->
-<section class="section">
-  <div class="section-title">
-    <span class="badge badge-both">ملخص</span>
-    <h2>جدول الاتفاق — كل الـ APIs في مكان واحد</h2>
-  </div>
-
-  <table>
-    <tr>
-      <th>#</th>
-      <th>Endpoint</th>
-      <th>Method</th>
-      <th>يبنيه</th>
-      <th>يستدعيه</th>
-      <th>الأسبوع</th>
-      <th>الوظيفة</th>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td style="direction:ltr; text-align:left">/api/v1/packages/generate</td>
-      <td>POST</td>
-      <td style="color:var(--alpha)"><strong>Alpha</strong></td>
-      <td>Beta UI</td>
-      <td>Week 3+</td>
-      <td>توليد الباقة السياحية</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td style="direction:ltr; text-align:left">/api/v1/knowledge/search</td>
-      <td>POST</td>
-      <td style="color:var(--beta)"><strong>Beta</strong></td>
-      <td>Alpha Agent</td>
-      <td>Week 4</td>
-      <td>بحث في المعرفة السياحية (RAG)</td>
-    </tr>
-    <tr>
-      <td>3a</td>
-      <td style="direction:ltr; text-align:left">/api/v1/smes</td>
-      <td>POST</td>
-      <td style="color:var(--beta)"><strong>Beta</strong></td>
-      <td>Beta Dashboard</td>
-      <td>Week 6</td>
-      <td>إضافة مرشد / مشغّل</td>
-    </tr>
-    <tr>
-      <td>3b</td>
-      <td style="direction:ltr; text-align:left">/api/v1/smes/recommend</td>
-      <td>POST</td>
-      <td style="color:var(--beta)"><strong>Beta</strong></td>
-      <td>Alpha Agent</td>
-      <td>Week 6</td>
-      <td>توصية مرشد مناسب</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td style="direction:ltr; text-align:left">/api/v1/context</td>
-      <td>POST</td>
-      <td style="color:var(--beta)"><strong>Beta</strong></td>
-      <td>Alpha Agent</td>
-      <td>Week 5</td>
-      <td>طقس · مسافات · مواعيد فتح</td>
-    </tr>
-  </table>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════ TEAM COMMITMENTS -->
-<section class="section">
-  <div class="section-title">
-    <span class="badge badge-both">الاجتماع</span>
-    <h2>ماذا يقول كل فريق؟ — الالتزام الرسمي</h2>
-  </div>
-
-  <div class="summary-box">
-    <h3>هذه هي الـ API Agreement — يجب الموافقة عليها قبل البدء</h3>
-
-    <div class="team-commit">
-      <div class="commit-beta">
-        <h4>Team Beta يقول:</h4>
-        <p style="color:var(--muted); font-size:0.9rem; margin-bottom:10px">"نحن نوفر لكم هذه الـ APIs:"</p>
-        <ul style="color:var(--muted); font-size:0.88rem; padding-right:18px">
-          <li><code>POST /knowledge/search</code> — للحصول على المعرفة السياحية</li>
-          <li><code>POST /context</code> — للحصول على الطقس والمسافات والمواعيد</li>
-          <li><code>POST /smes/recommend</code> — للحصول على مرشد مناسب</li>
-          <li><code>POST /smes</code> — Dashboard لإدارة المرشدين</li>
-          <li>React UI + Innovation Hub</li>
-          <li>ChromaDB + Tourism Data + SME Database</li>
-        </ul>
+    <!-- ═══════════════════════════════════════════════════════ TEAM COMMITMENTS -->
+    <section class="section">
+      <div class="section-title">
+        <span class="badge badge-both">الاجتماع</span>
+        <h2>ماذا يقول كل فريق؟ — الالتزام الرسمي</h2>
       </div>
 
-      <div class="commit-alpha">
-        <h4>Team Alpha يقول:</h4>
-        <p style="color:var(--muted); font-size:0.9rem; margin-bottom:10px">"نحن نبني:"</p>
-        <ul style="color:var(--muted); font-size:0.88rem; padding-right:18px">
-          <li><code>POST /packages/generate</code> — توليد الباقة</li>
-          <li>ReTour Tourism Agent (وكيل واحد)</li>
-          <li>LLM Manager + RAG Orchestrator</li>
-          <li>Decision Rules + Package Validator</li>
-          <li><strong>نستخدم APIs الخاصة بكم</strong> — لا ندخل ChromaDB أو Weather مباشرة</li>
-        </ul>
+      <div class="summary-box">
+        <h3>هذه هي الـ API Agreement — يجب الموافقة عليها قبل البدء</h3>
+
+        <div class="team-commit">
+          <div class="commit-beta">
+            <h4>Team Beta يقول:</h4>
+            <p style="color:var(--muted); font-size:0.9rem; margin-bottom:10px">"نحن نوفر لكم هذه الـ APIs:"</p>
+            <ul style="color:var(--muted); font-size:0.88rem; padding-right:18px">
+              <li><code>POST /knowledge/search</code> — للحصول على المعرفة السياحية</li>
+              <li><code>POST /context</code> — للحصول على الطقس والمسافات والمواعيد</li>
+              <li><code>POST /smes/recommend</code> — للحصول على مرشد مناسب</li>
+              <li><code>POST /smes</code> — Dashboard لإدارة المرشدين</li>
+              <li>React UI + Innovation Hub</li>
+              <li>ChromaDB + Tourism Data + SME Database</li>
+            </ul>
+          </div>
+
+          <div class="commit-alpha">
+            <h4>Team Alpha يقول:</h4>
+            <p style="color:var(--muted); font-size:0.9rem; margin-bottom:10px">"نحن نبني:"</p>
+            <ul style="color:var(--muted); font-size:0.88rem; padding-right:18px">
+              <li><code>POST /packages/generate</code> — توليد الباقة</li>
+              <li>ReTour Tourism Agent (وكيل واحد)</li>
+              <li>LLM Manager + RAG Orchestrator</li>
+              <li>Decision Rules + Package Validator</li>
+              <li><strong>نستخدم APIs الخاصة بكم</strong> — لا ندخل ChromaDB أو Weather مباشرة</li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ RULES -->
+    <section class="section">
+      <div class="section-title">
+        <span class="badge badge-both">قواعد</span>
+        <h2>قواعد ذهبية — لا تُكسر</h2>
+      </div>
+
+      <div class="grid-3">
+        <div class="card" style="border-color:var(--bad)">
+          <h3 style="color:var(--bad)">🚫 ممنوع</h3>
+          <ul>
+            <li>Alpha يدخل ChromaDB مباشرة</li>
+            <li>Alpha يستدعي Weather API مباشرة</li>
+            <li>UI يتكلم مع Agent مباشرة</li>
+            <li>Beta يبني منطق الـ Agent</li>
+            <li>تغيير الـ schema بدون اتفاق الفريقين</li>
+          </ul>
+        </div>
+        <div class="card" style="border-color:var(--ok)">
+          <h3 style="color:var(--ok)">✅ مطلوب</h3>
+          <ul>
+            <li>كل تواصل عبر APIs موثّقة</li>
+            <li>Request/Response schemas ثابتة</li>
+            <li>Alpha يستهلك Beta APIs فقط</li>
+            <li>Beta يغلّف External APIs</li>
+            <li>مراجعة العقد قبل كل أسبوع</li>
+          </ul>
+        </div>
+        <div class="card" style="border-color:var(--external)">
+          <h3 style="color:var(--external)">📅 الترتيب</h3>
+          <ul>
+            <li><strong>Week 3:</strong> API 1 — Generate Package</li>
+            <li><strong>Week 4:</strong> API 2 — Knowledge Search</li>
+            <li><strong>Week 5:</strong> API 4 — Context</li>
+            <li><strong>Week 6:</strong> API 3 — SME</li>
+            <li><strong>Week 7:</strong> Integration + QA</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ AGENT INTERNAL -->
+    <section class="section">
+      <div class="section-title">
+        <span class="badge badge-alpha">داخلي</span>
+        <h2>ماذا يفعل الـ Agent عند استدعاء Generate؟</h2>
+      </div>
+
+      <div class="pipeline"><span class="comment">/* POST /api/v1/packages/generate — خطوات داخلية عند Alpha */</span>
+
+        <span class="a">1.</span> استقبال <span class="a">TouristProfile</span> من Beta UI
+
+        <span class="a">2.</span> استدعاء <span class="b">POST /knowledge/search</span>
+        → أماكن أثرية في عمان لعائلة
+
+        <span class="a">3.</span> استدعاء <span class="b">POST /context</span> (Week 5+)
+        → حرارة 40°C · أماكن مفتوحة · أوقات السفر
+
+        <span class="a">4.</span> استدعاء <span class="b">POST /smes/recommend</span> (Week 6+)
+        → Ahmed · German · Heritage
+
+        <span class="a">5.</span> دمج كل المصادر في Prompt
+
+        <span class="a">6.</span> إرسال للـ <span class="a">LLM Manager</span> → Claude
+
+        <span class="a">7.</span> Validation + Grounding check
+
+        <span class="a">8.</span> إرجاع <span class="a">TourismPackage</span> JSON لـ Beta UI
+      </div>
+    </section>
+
+    <p class="footer">
+      ReTour API Agreement · Team Alpha ↔ Team Beta · Jordan Smart Tourism Pilot<br>
+      وثيقة اتفاق — يجب الموافقة قبل التطوير المتكامل · July 2026
+    </p>
+
   </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════ RULES -->
-<section class="section">
-  <div class="section-title">
-    <span class="badge badge-both">قواعد</span>
-    <h2>قواعد ذهبية — لا تُكسر</h2>
-  </div>
-
-  <div class="grid-3">
-    <div class="card" style="border-color:var(--bad)">
-      <h3 style="color:var(--bad)">🚫 ممنوع</h3>
-      <ul>
-        <li>Alpha يدخل ChromaDB مباشرة</li>
-        <li>Alpha يستدعي Weather API مباشرة</li>
-        <li>UI يتكلم مع Agent مباشرة</li>
-        <li>Beta يبني منطق الـ Agent</li>
-        <li>تغيير الـ schema بدون اتفاق الفريقين</li>
-      </ul>
-    </div>
-    <div class="card" style="border-color:var(--ok)">
-      <h3 style="color:var(--ok)">✅ مطلوب</h3>
-      <ul>
-        <li>كل تواصل عبر APIs موثّقة</li>
-        <li>Request/Response schemas ثابتة</li>
-        <li>Alpha يستهلك Beta APIs فقط</li>
-        <li>Beta يغلّف External APIs</li>
-        <li>مراجعة العقد قبل كل أسبوع</li>
-      </ul>
-    </div>
-    <div class="card" style="border-color:var(--external)">
-      <h3 style="color:var(--external)">📅 الترتيب</h3>
-      <ul>
-        <li><strong>Week 3:</strong> API 1 — Generate Package</li>
-        <li><strong>Week 4:</strong> API 2 — Knowledge Search</li>
-        <li><strong>Week 5:</strong> API 4 — Context</li>
-        <li><strong>Week 6:</strong> API 3 — SME</li>
-        <li><strong>Week 7:</strong> Integration + QA</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════ AGENT INTERNAL -->
-<section class="section">
-  <div class="section-title">
-    <span class="badge badge-alpha">داخلي</span>
-    <h2>ماذا يفعل الـ Agent عند استدعاء Generate؟</h2>
-  </div>
-
-  <div class="pipeline"><span class="comment">/* POST /api/v1/packages/generate — خطوات داخلية عند Alpha */</span>
-
-<span class="a">1.</span> استقبال <span class="a">TouristProfile</span> من Beta UI
-
-<span class="a">2.</span> استدعاء <span class="b">POST /knowledge/search</span>
-     →  أماكن أثرية في عمان لعائلة
-
-<span class="a">3.</span> استدعاء <span class="b">POST /context</span>  (Week 5+)
-     →  حرارة 40°C · أماكن مفتوحة · أوقات السفر
-
-<span class="a">4.</span> استدعاء <span class="b">POST /smes/recommend</span>  (Week 6+)
-     →  Ahmed · German · Heritage
-
-<span class="a">5.</span> دمج كل المصادر في Prompt
-
-<span class="a">6.</span> إرسال للـ <span class="a">LLM Manager</span> → Claude
-
-<span class="a">7.</span> Validation + Grounding check
-
-<span class="a">8.</span> إرجاع <span class="a">TourismPackage</span> JSON لـ Beta UI</div>
-</section>
-
-<p class="footer">
-  ReTour API Agreement · Team Alpha ↔ Team Beta · Jordan Smart Tourism Pilot<br>
-  وثيقة اتفاق — يجب الموافقة قبل التطوير المتكامل · July 2026
-</p>
-
-</div>
 </body>
+
 </html>
