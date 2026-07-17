@@ -37,17 +37,17 @@ const airports = [
 
     {
         value: "AMM",
-        label: "Queen Alia (AMM)"
+        label: "Queen Alia International Airport (Amman)",
     },
 
     {
         value: "AQJ",
-        label: "King Hussein (AQJ)"
+        label: "King Hussein International Airport (Aqaba)",
     },
 
     {
         value: "OTHER",
-        label: "Other"
+        label: "Other Airport",
     },
 
 ];
@@ -90,7 +90,8 @@ export default function Step1({
 
                     <label className="form-label">
 
-                        Start Date
+                        <i className="bi bi-calendar-event me-2 text-success"></i>
+                        When are you planning to visit Jordan?
 
                     </label>
 
@@ -122,6 +123,7 @@ export default function Step1({
 
                     <label className="form-label">
 
+                        <i className="bi bi-airplane me-2 text-success"></i>
                         Arrival Airport
 
                     </label>
@@ -180,7 +182,8 @@ export default function Step1({
 
                     <label className="form-label">
 
-                        Package Duration
+                        <i className="bi bi-calendar-week me-2 text-success"></i>
+                        Trip Duration
 
                     </label>
 
@@ -191,41 +194,23 @@ export default function Step1({
                             durations.map((item) => (
 
                                 <button
-
                                     key={item}
-
                                     type="button"
-
-                                    className={`${styles.durationButton}
-
-                                    ${data.duration === item
-
-                                            ?
-
-                                            styles.activeDuration
-
-                                            :
-
-                                            ""
-
+                                    className={`${styles.durationButton} ${data.duration === item
+                                        ? styles.activeDuration
+                                        : ""
                                         }`}
-
                                     onClick={() =>
-
                                         updateField(
-
                                             "duration",
-
                                             item as any
-
                                         )
-
                                     }
-
                                 >
-
-                                    {item}
-
+                                    {item === "Custom"
+                                        ? "Custom"
+                                        : `${item} Day`
+                                    }
                                 </button>
 
                             ))
@@ -239,7 +224,8 @@ export default function Step1({
 
                     <label className="form-label">
 
-                        Total Budget (JOD)
+                        <i className="bi bi-wallet2 me-2 text-success"></i>
+                        Estimated Trip Budget
 
                     </label>
 
@@ -249,7 +235,7 @@ export default function Step1({
 
                         className="form-control"
 
-                        placeholder="e.g. 1200"
+                        placeholder="Example: 1,200 JOD"
 
                         value={data.totalBudget}
 
@@ -273,7 +259,9 @@ export default function Step1({
 
                     <label className="form-label">
 
+                        <i className="bi bi-globe2 me-2 text-success"></i>
                         Preferred Language
+
 
                     </label>
 
@@ -363,11 +351,14 @@ export default function Step1({
 
                 <div className="col-12">
 
-                    <label className="form-label mb-3">
-
-                        Preferred Regions
-
+                    <label className="form-label">
+                        <i className="bi bi-geo-alt me-2 text-success"></i>
+                        Destinations to Explore
                     </label>
+
+                    <p className={styles.fieldHint}>
+                        Select one or more destinations.
+                    </p>
 
                     <div className={styles.regionChips}>
 

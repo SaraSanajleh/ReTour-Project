@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 
 import styles from "@/styles/wizard/wizard.module.css";
+import Link from "next/link";
 
 type Props = {
     currentStep: number;
@@ -31,8 +32,8 @@ export default function WizardSidebar({ currentStep }: Props) {
     return (
         <aside className={styles.sidebar}>
             {/* Logo */}
-
             <div className={styles.sidebarTop}>
+
                 <div className={styles.logoSection}>
                     <div className={styles.logoIcon}>
                         <MapPin size={18} />
@@ -44,7 +45,15 @@ export default function WizardSidebar({ currentStep }: Props) {
                     </div>
                 </div>
 
-                {/* Steps */}
+                <Link href="/" className={styles.backHomeLink}>
+
+                    <div className={styles.backHomeCircle}>
+                        <i className="bi bi-arrow-left"></i>
+                    </div>
+
+                    <span>Back to Home</span>
+
+                </Link>
 
                 <nav className={styles.steps}>
                     {steps.map((step) => {
@@ -66,8 +75,8 @@ export default function WizardSidebar({ currentStep }: Props) {
                         );
                     })}
                 </nav>
-            </div>
 
+            </div>
             {/* AI Assistant */}
 
             <div className={styles.aiAssistant}>
@@ -82,6 +91,6 @@ export default function WizardSidebar({ currentStep }: Props) {
                     create the perfect itinerary.
                 </p>
             </div>
-        </aside>
+        </aside >
     );
 }

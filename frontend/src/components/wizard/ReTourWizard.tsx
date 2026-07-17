@@ -53,7 +53,7 @@ export default function ReTourWizard({
 
             preferredRegion: [],
 
-            adults: 2,
+            adults: 0,
 
             children: 0,
 

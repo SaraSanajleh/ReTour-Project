@@ -2,6 +2,7 @@
 
 import styles from "@/styles/wizard/wizard.module.css";
 
+
 type Props = {
 
     currentStep: number;
@@ -77,6 +78,7 @@ export default function WizardHeader({
             <div className={styles.header}>
 
                 <div>
+
 
                     <span className={styles.stepBadge}>
 

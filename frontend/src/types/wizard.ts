@@ -1,24 +1,3 @@
-/**
- * types/wizard.ts
- *
- * Shared type definitions for the ReTour AI Trip Wizard.
- * Every wizard-related file (constants, hooks, step components, services)
- * should import from here instead of redefining shapes locally.
- */
-
-/* ---------------------------------------------------------------------- */
-/*  Entry point / mode                                                    */
-/* ---------------------------------------------------------------------- */
-
-/**
- * How the user entered the wizard. Both entry points ("Browse Ready
- * Packages" and "AI Package Builder") render the exact same wizard UI —
- * this field is the only thing that differs, and it travels through to
- * the backend so it knows which flow to run:
- *   - "ready_packages": match against existing packages, then personalize
- *     within the closest match.
- *   - "ai_builder": build a fully custom package from scratch.
- */
 export type WizardMode = "ready_packages" | "ai_builder";
 
 /* ---------------------------------------------------------------------- */
@@ -112,16 +91,7 @@ export interface WizardMatchIndicators {
   confidence: number;
 }
 
-/* ---------------------------------------------------------------------- */
-/*  Backend submission payload (draft — confirm with Team Alpha)          */
-/* ---------------------------------------------------------------------- */
 
-/**
- * Shape of the JSON sent to the backend when the user clicks
- * "Generate My Package". This is a first draft based on the current
- * form fields — treat it as a proposal to review with Team Alpha before
- * it's treated as a stable contract.
- */
 export interface WizardSubmissionPayload {
   requestType: WizardMode;
   submittedAt: string; // ISO timestamp
